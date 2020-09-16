@@ -41,6 +41,14 @@ class RadioTest {
     }
 
     @Test
+    public void getAndSetStationNumberUnderMin() {
+
+        radio.setStationNumber(-1);
+
+        assertEquals(0, radio.getStationNumber());
+    }
+
+    @Test
     public void increaseStationNumber() {
 
         radio.setStationNumber(7);
@@ -104,6 +112,14 @@ class RadioTest {
     public void setAndGetVolumeEqualsMin() {
 
         radio.setVolume(0);
+
+        assertEquals(0, radio.getVolume());
+    }
+
+    @Test
+    public void setAndGetVolumeUnderMin() {
+
+        radio.setVolume(-2);
 
         assertEquals(0, radio.getVolume());
     }

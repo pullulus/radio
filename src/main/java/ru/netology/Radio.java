@@ -5,11 +5,15 @@ public class Radio {
     private int volume;
 
     public int getStationNumber() {
+
         return stationNumber;
     }
 
     public void setStationNumber(int stationNumber) {
         if (stationNumber > 9) {
+            return;
+        }
+        if (stationNumber < 0) {
             return;
         }
 
@@ -33,11 +37,15 @@ public class Radio {
     }
 
     public int getVolume() {
+
         return volume;
     }
 
     public void setVolume(int volume) {
         if (volume > 10) {
+            return;
+        }
+        if (volume < 0) {
             return;
         }
 
